@@ -1,0 +1,130 @@
+@import url("./fonts.css");
+@import url("./config.css");
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  border-radius: 24px 24px 108px 24px;
+  padding: 2rem;
+  background-color: #ffffff;
+  min-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 570px) {
+  main {
+    min-width: 90%;
+  }
+}
+
+.grid-container {
+  display: grid;
+  min-width: 100%;
+  grid-template-columns: repeat(3, 1fr) 25%;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.grid-item-result {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+input[type="text"] {
+  border-radius: 4px;
+  border: 0.5px solid rgb(0, 0, 0);
+  padding: 10px;
+  line-height: 18px;
+  width: 100%;
+}
+
+.separated_container {
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: row; */
+}
+
+#img_container {
+  background-color: #864cff;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img_container img {
+  max-height: 45%;
+  max-width: 45%;
+}
+
+#img_container.clicked {
+  border-style: solid;
+  border-color: #000;
+  border-width: 3px;
+}
+
+.notif {
+  height: 20px;
+  color: red;
+  font-size: 12px;
+  display: block;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 570px) {
+  .notif {
+    font-size: 8px;
+  }
+}
+
+.notif.active {
+  visibility: visible; /* shows the error message when there is one */
+}
+
+.hr_line {
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  display: block;
+}
+
+.grid-item-result .dash {
+  color: #874cff;
+  letter-spacing: 8px;
+  margin-right: 15px;
+  font-weight: italic;
+}
+
+.label-years,
+.label-months,
+.label-days {
+  margin-top: -20px;
+  font-style: italic;
+  font-size: 72px;
+  color: #000;
+  font-weight: bold;
+}
